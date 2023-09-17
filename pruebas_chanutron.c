@@ -1,9 +1,9 @@
+#include "pa2m.h"
+#include "src/ataque.h"
+#include "src/pokemon.h"
 #include "src/tipo.h"
 #include <stdio.h>
 #include <string.h>
-#include "src/pokemon.h"
-#include "src/ataque.h"
-#include "pa2m.h"
 
 #define ARCHIVO_INEXISTENTE \
 	"ejemplos/asdaskjhdsjfhgasjkdhfgaksjldhfgsdjkfhgdsfjkhg"
@@ -160,7 +160,8 @@ void cargar_archivo_carga_datos_correctos_de_todos_los_pokemon()
 
 		pa2m_afirmar(
 			(p = pokemon_buscar(info, d->nombre)) != NULL,
-			"Puedo buscar (y encuentro) el pokemon que corresponde segun orden alfabetico");
+			"Puedo buscar (y encuentro) el pokemon que corresponde segun "
+			"orden alfabetico");
 
 		if (!p)
 			continue;
@@ -247,7 +248,7 @@ void iterar_ataques_con_funcion_null_no_hace_nada()
 void pruebas_null()
 {
 	int i = 0;
-	void *nullnt = &i; //no debería hacer esto, pero me dio fiaca
+	void *nullnt = &i; // no debería hacer esto, pero me dio fiaca
 
 	pa2m_afirmar(pokemon_buscar(NULL, NULL) == NULL,
 		     "No puedo buscar pokemon con info NULL");

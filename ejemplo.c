@@ -1,5 +1,5 @@
-#include "src/pokemon.h"
 #include "src/ataque.h"
+#include "src/pokemon.h"
 #include <stdio.h>
 
 void mostrar_pokemon(pokemon_t *p, void *aux)
